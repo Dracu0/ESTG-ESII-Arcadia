@@ -1,77 +1,65 @@
-# Documento de Visão: Arcadia
+# Documento de Visão: Site de Minijogos
 
-## 1. Introdução
+## 1. Objetivo
+O objetivo do site de minijogos é criar uma plataforma online que disponibilize uma ampla variedade de minijogos rápidos e divertidos, proporcionando entretenimento casual para jogadores de todas as idades. O sistema será acessível, fácil de usar e permitirá que os usuários joguem diretamente nos seus navegadores, sem a necessidade de downloads complexos ou tutoriais longos.
 
-### 1.1 Resumo do Projeto
-O site de minijogos será uma plataforma online que fornecerá uma variedade de jogos rápidos e divertidos para jogadores de todas as idades. O objetivo principal é oferecer uma experiência simples, acessível e envolvente, permitindo que os usuários se divirtam sem precisar de downloads complexos ou tutoriais longos.
+## 2. Escopo
+O site de minijogos poderá ser utilizado em diversos contextos e ambientes, como:
+- **Residências**: Para diversão individual ou LAN.
+- **Escolas**: Como recurso para entretenimento em momentos de lazer dos estudantes.
+- **Cafés e Cybercafés**: Oferecendo entretenimento casual para os clientes.
+- **Ambientes Corporativos**: Durante pausas, promovendo momentos de relaxamento para os funcionários.
 
-### 1.2 Objetivos do Projeto
-- Criar um site com diversos minijogos grátis.
-- Estimular a interação dos usuários através de pontuações nos jogos.
-- Permitir a pesquisa com filtros para encontrar o jogo perfeito para o utilizador.
+## 3. Partes Interessadas (Stakeholders)
+- **Usuários Finais**: Crianças, adolescentes e jovens adultos que procuram entretenimento rápido e acessível.
+- **Proprietário do Sistema**: Administrador da plataforma, responsável pela manutenção e gerenciamento do conteúdo do site.
+- **Equipa de Desenvolvimento**: Responsáveis pela implementação e manutenção do sistema.
+- **Anunciantes**: Empresas interessadas em promover os produtos e serviços na plataforma.
+- **Pais e Educadores**: Que podem utilizar o site para momentos de lazer.
 
-## 2. Visão Geral do Produto
+## 4. Equipe do Projeto
+### 4.1 Time de Desenvolvimento
+- **Desenvolvedor Frontend**: Responsável pela interface do usuário(HTML e CSS).
+- **Desenvolvedor Backend**: Responsável pelo servidor e lógica do sistema (C#).
+- **Engenheiro de Software Low Code**: Responsável por construir e integrar partes da plataforma utilizando **Outsystems**.
+- **Designer Gráfico**: Criação de gráficos, layout e identidade visual do site.
+- **Gerente de Projeto**: Coordenação da equipe e planejamento do cronograma de desenvolvimento.
+- **Testadores**: Garantir a qualidade e funcionalidade do site antes do lançamento.
 
-### 2.1 Público-Alvo
-- **Idade:** Crianças, adolescentes e adultos jovens.
-- **Perfil do Usuário:** Jogadores casuais que procuram entretenimento rápido e leve.
-- **Dispositivos:** Utilizadores que acedem em computadores.
-
-### 2.2 Benefícios para o Usuário
-- **Diversão rápida e acessível**: Jogar sem necessidade de instalar os jogos.
-- **Variedade**: Grande coleção de minijogos de diferentes categorias (quebra-cabeças, aventura, arcade).
-- **Interatividade**: Sistema de tabela de pontos para motivar a competição saudável.
-
-## 3. Funcionalidades do Produto
-
-### 3.1 Funcionalidades Principais
+## 5. Características do Sistema
+### 5.1 Funcionalidades Principais
 1. **Biblioteca de Jogos**
    - Catálogo de minijogos organizados por categorias (arcade, quebra-cabeça, ação, etc.).
    - Pesquisa e filtro de jogos por tipo.
 
 2. **Tabela de Pontuações**
-   - Sistema de tabela de pontos para os jogos que for necessário, exibindo as melhores pontuações dos jogadores.
+   - Sistema de tabela de pontos para jogos que necessitem, exibindo as melhores pontuações dos jogadores.
    - Rankings específicos para cada jogo, incentivando a competitividade.
 
 3. **Perfis do Utilizador**
-   - Cadastro com nome e password.
+   - Cadastro com nome e password para personalização e armazenamento de dados do usuário.
 
 4. **Design Responsivo**
-   - Interface adaptável a qualquer computador, garantindo que a experiência do jogo seja a mesma em PC's diferentes.
+   - Interface adaptável a qualquer computador, garantindo uma experiência de jogo consistente.
 
-### 3.2 Funcionalidades Adicionais
-1. **Por Definir**
-   
-## 4. Requisitos de Usuabilidade
+### 5.2 Funcionalidades Adicionais
+- **Interatividade Social**: Ranking global, comentários entre utilizadores.
 
-### 4.1 Interface
-- **Simples e Intuitiva**: A navegação no site deve ser fácil, com menus claros e objetivos.
-- **Tempo de Carregamento Rápido**: Todos os jogos e funcionalidades devem carregar rapidamente, evitando frustrações.
-- **Estética Agradável**: Cores vibrantes e ícones amigáveis, adaptados ao público mais jovem.
+## 6. Arquitetura de Referência
+A arquitetura do sistema será composta pelos seguintes componentes principais:
+- **Frontend**: Implementado com **HTML e CSS**, responsável pela interface com o usuário.
+- **Backend**: Desenvolvido em **C#**, responsável pela lógica do servidor e gerenciamento de dados.
+- **Base de Dados**: Sistema de armazenamento em SQL, que vai guardar informações dos usuários, pontuações e detalhes dos jogos.
+- **Low Code Integration**: Uso de **Outsystems** para construção e manutenção rápida de partes do sistema.
 
-### 4.2 Acessibilidade
-- **Multiplataforma**: Disponível e funcional em navegadores de desktop.
-- **Suporte Multilíngue**: Inicialmente em português, com a possibilidade de expandir para inglês e/ou espanhol.
+## 7. Restrições do Produto
+### 7.1 Restrições Identificadas
+- **Desempenho**: A plataforma pode não funcionar bem em computadores de baixo desempenho, comprometendo a experiência de alguns usuários.
+- **Conectividade**: Dependência de conexão à internet, limitando o uso em áreas sem acesso adequado à internet.
+- **Compatibilidade**: Alguns navegadores mais antigos podem não suportar todos os recursos de forma otimizada.
 
-## 5. Tecnologias e Requisitos Técnicos
-
-### 5.1 Tecnologias
-- **Frontend**: HTML e CSS.
-- **Backend**: C#.
-- **Low Code**: Outsystems
-- **Banco de Dados**: Por definir.
-
-### 5.2 Requisitos de Plataforma
-- **Compatibilidade de Navegador**: Deve funcionar nos principais navegadores (Chrome, Firefox, Safari, Edge).
-  
-## 6. Riscos e Desafios
-
-### 6.1 Riscos Identificados
-- **Desempenho**: Jogos com baixa performance em computadores de baixo/médio desempenho.
-- **Concorrência**: Há muitos sites de minijogos disponíveis, portanto é necessário oferecer diferencial competitivo.
-
-### 7.2 Estratégias de Mitigação
-- **Teste de Usabilidade**: Realizar testes constantes para garantir uma experiência fluida.
-
-## 8. Conclusão
-O site de minijogos visa criar uma plataforma divertida, acessível e envolvente para jogadores casuais. Através de uma interface intuitiva e uma biblioteca variada de jogos, o objetivo é proporcionar uma experiência agradável e envolvente, motivando a competição e a interação social.
+## 8. Integração LLM (Large Language Model)
+### 8.1 Utilização do LLM
+- **Assistência ao Utilizador**: Utilizar um LLM (como o GPT-4) para fornecer suporte em tempo real aos usuários, respondendo a perguntas sobre como jogar, resolver problemas comuns e até sugerir jogos com base nas preferências do utilizador.
+- **Moderação e Monitoramento**: O LLM pode ser usado para monitorar comentários e interações, filtrando o conteúdo inapropriado e mantendo um ambiente seguro para os jogadores.
+- **Personalização de Experiência**: Analisar o comportamento dos usuários e sugerir jogos personalizados, aumentando o engajamento e a satisfação.
