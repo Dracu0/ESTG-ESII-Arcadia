@@ -1,4 +1,4 @@
-# Documento de Visão: Site de Minijogos
+# Documento de Visão: Arcadia
 
 ## 1. Introdução
 
