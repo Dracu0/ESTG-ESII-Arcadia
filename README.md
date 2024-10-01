@@ -1,4 +1,4 @@
-# Projeto : "nome"
+# Projeto : Arcadia
 
 ## Colaboradores:
 - Guilherme Pinto
