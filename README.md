@@ -2,7 +2,7 @@
 
 ## Colaboradores:
 
-<table>
+<table align="center">
     <tr>
         <td align="center">
             <a href="https://github.com/Dracu0">
@@ -22,7 +22,8 @@
         </td>
         <td align="center">
             <a href="https://github.com/GuilhermePinto04">
-                <img src="https://github.com/GuilhermePinto04.png" width="100" height="100" alt="GuilhermePinto04"><br />
+                <img src="https://github.com/GuilhermePinto04.png" width="100" height="100"
+                    alt="GuilhermePinto04"><br />
             </a>
             <sub><b>GuilhermePinto04</b></sub>
             <br>
