@@ -29,5 +29,3 @@
 ### Estatísticas de Utilização
 - Como administrador, quero ver as estatísticas de utilização de cada jogo, para tomar decisões informadas sobre os jogos disponíveis no site.
   - Critério de Aceitação: O administrador deve poder visualizar estatísticas de uso para cada jogo.
-
-Agora cada user story está formatada corretamente com "Como [tipo de usuário] quero [ação] para [benefício]".
