@@ -10,7 +10,7 @@
 - José
 
 ## Objetivo: 
-blablabla
+Aceder ao website, jogar os jogos disponivéis e obter pontuação máxima de cada um 
 
 ## Linguagens de programação/Apps a ser utilizadas:
  - Outsystems
