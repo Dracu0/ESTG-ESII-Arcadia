@@ -1,13 +1,13 @@
 # Projeto : "nome"
 
 ## Colaboradores:
-- Guilherme 
-- Lucas 
-- Angela 
-- David 
-- Diogo
-- Rodrigo
-- José
+- Guilherme Pinto
+- Lucas Neves
+- Angela Xavier
+- David Ramos
+- Diogo Oliveira
+- Rodrigo Jeremias
+- José Pisco
 
 ## Objetivo: 
 Aceder ao website, jogar os jogos disponivéis e obter pontuação máxima de cada um 
