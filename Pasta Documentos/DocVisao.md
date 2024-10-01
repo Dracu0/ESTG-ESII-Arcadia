@@ -47,7 +47,7 @@ O site de minijogos poderá ser utilizado em diversos contextos e ambientes, com
 
 ## 6. Arquitetura de Referência
 A arquitetura do sistema será composta pelos seguintes componentes principais:
-- **Frontend**: Implementado com **HTML e CSS**, responsável pela interface com o usuário.
+- **Frontend**: Implementado com **HTML**, responsável pela interface com o usuário.
 - **Backend**: Desenvolvido em **C#**, responsável pela lógica do servidor e gerenciamento de dados.
 - **Base de Dados**: Sistema de armazenamento em SQL, que vai guardar informações dos usuários, pontuações e detalhes dos jogos.
 - **Low Code Integration**: Uso de **Outsystems** para construção e manutenção rápida de partes do sistema.
