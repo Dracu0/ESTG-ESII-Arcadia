@@ -7,7 +7,7 @@
     <tr>
         <td align="center" valign="center" id="wrappercell">
             <a href="https://github.com/Dracu0">
-                <img src="https://github.com/Dracu0.png" width="auto" height="auto" alt="Dracu0"><br/>
+                <img src="https://github.com/Dracu0.png" width="500" height="auto alt="Dracu0"><br/>
             </a>
             <sub><b>Dracu0</b></sub>
             <br>
@@ -15,7 +15,7 @@
         </td>
         <td align="center" valign="center" id="wrappercell">
             <a href="https://github.com/Akawii">
-                <img src="https://github.com/Akawii.png" width="auto" height="auto" alt="Akawii"><br/>
+                <img src="https://github.com/Akawii.png" width="500" height="auto" alt="Akawii"><br/>
             </a>
             <sub><b>Akawii</b></sub>
             <br>
@@ -23,7 +23,7 @@
         </td>
         <td align="center" valign="center" id="wrappercell">
             <a href="https://github.com/GuilhermePinto04">
-                <img src="https://github.com/GuilhermePinto04.png" width="auto" height="auto"
+                <img src="https://github.com/GuilhermePinto04.png" width="500" height="auto"
                     alt="GuilhermePinto04"><br />
             </a>
             <sub><b>GuilhermePinto04</b></sub>
@@ -32,7 +32,7 @@
         </td>
         <td align="center" valign="center" id="wrappercell">
             <a href="https://github.com/LucasNeves2003">
-                <img src="https://github.com/LucasNeves2003.png" width="auto" height="auto" alt="LucasNeves2003"><br />
+                <img src="https://github.com/LucasNeves2003.png" width="500" height="auto" alt="LucasNeves2003"><br />
             </a>
             <sub><b>LucasNeves2003</b></sub>
             <br>
@@ -40,7 +40,7 @@
         </td>
          <td align="center" valign="center" id="wrappercell">   
              <a href="https://github.com/Zarkwol">
-                <img src="https://github.com/Zarkwol.png" width="auto" height="auto" alt="Zarkwol"><br />
+                <img src="https://github.com/Zarkwol.png" width="500" height="auto" alt="Zarkwol"><br />
             </a>
             <sub><b>Zarkwol</b></sub>
             <br>
@@ -48,7 +48,7 @@
         </td>
         <td align="center" valign="center" id="wrappercell">
             <a href="https://github.com/rodriiabj">
-                <img src="https://github.com/rodriiabj.png" width="auto" height="auto" alt="rodriiabj">
+                <img src="https://github.com/rodriiabj.png" width="500" height="auto" alt="rodriiabj">
     <br/>
             </a>
             <sub><b>rodriiabj</b></sub>
@@ -56,7 +56,7 @@
             <sub>Rodrigo Jeremias</sub>
         </td> 
           <td align="center" valign="center" id="wrappercell">  <a href="https://github.com/JoseCode45">
-                <img src="https://github.com/JoseCode45.png" width="auto" height="auto" alt="JoseCode45"><br />
+                <img src="https://github.com/JoseCode45.png" width="500" height="auto" alt="JoseCode45"><br />
             </a>
             <sub><b>JoseCode45</b></sub>
             <br>
