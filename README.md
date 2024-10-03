@@ -53,6 +53,14 @@
             <br>
             <sub>Rodrigo Jeremias</sub>
         </td>
+        <td align="center">
+            <a href="https://github.com/JoseCode45">
+                <img src="https://github.com/JoseCode45.png" width="100" height="100" alt="JoseCode45"><br />
+            </a>
+            <sub><b>JoseCode45</b></sub>
+            <br>
+            <sub>José Pisco</sub>
+        </td>
     </tr>
 </table>
 
