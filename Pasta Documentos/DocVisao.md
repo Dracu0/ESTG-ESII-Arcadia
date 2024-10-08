@@ -45,14 +45,21 @@ O site de minijogos poderá ser utilizado em diversos contextos e ambientes, com
 5. **Personalização de Avatares**
    - Opção para que os usuários personalizem seus perfis com avatares, skins ou outras formas de customização visual, utilizando pontos adquiridas nos jogos
 
-### 5.2 Funcionalidades Adicionais
-- **Interatividade Social**: Ranking global, comentários entre utilizadores.
-
+### 5.2 Funcionalidades Adicionais (Não Necessario)
+1. **Interatividade Social**
+   - Comparatilhar Ranking global, Comentários entre utilizadores online, partilhar screenshots.
+2. **Personalização de Avatares**
+   - Opção para que os usuários personalizem seus perfis com avatares, skins ou outras formas de customização visual, utilizando pontos adquiridas nos jogos
+3. **Histórico de Jogos**
+   - Armazenamento do histórico de partidas para cada usuário, permitindo que eles revisem seu desempenho anterior, melhorem estratégias e comparem suas estatísticas ao longo do tempo.
+4.**Suporte a Controladores Externos**
+   - Compatibilidade com gamepads e outros controladores externos.
+  
 ## 6. Arquitetura de Referência
 A arquitetura do sistema será composta pelos seguintes componentes principais:
 - **Frontend**: Implementado com **HTML**, responsável pela interface com o usuário.
 - **Backend**: Desenvolvido em **C#**, responsável pela lógica do servidor e gerenciamento de dados.
-- **Base de Dados**: Sistema de armazenamento em SQL, que vai guardar informações dos usuários, pontuações e detalhes dos jogos.
+- **Base de Dados**: Sistema de armazenamento em **SQL** usando XAMPP, que vai guardar informações dos usuários, pontuações e detalhes dos jogos.
 - **Low Code Integration**: Uso de **Outsystems** para construção e manutenção rápida de partes do sistema.
 
 ## 7. Restrições do Produto
