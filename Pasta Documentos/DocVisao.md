@@ -41,6 +41,9 @@ O site de minijogos poderá ser utilizado em diversos contextos e ambientes, com
 
 4. **Design Responsivo**
    - Interface adaptável a qualquer computador, garantindo uma experiência de jogo consistente.
+     
+5. **Personalização de Avatares**
+   - Opção para que os usuários personalizem seus perfis com avatares, skins ou outras formas de customização visual, utilizando pontos adquiridas nos jogos
 
 ### 5.2 Funcionalidades Adicionais
 - **Interatividade Social**: Ranking global, comentários entre utilizadores.
