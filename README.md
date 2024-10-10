@@ -2,96 +2,74 @@
 
 ## Colaboradores:
 
-<table border="0" cellpadding="0" cellspacing="0" width="100%" id="wrappertable" style="table-layout:fixed;">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout:fixed;">
     <tr>
         <td style="display:block;" align="center" valign="top" id="wrappercell">
             <a href="https://github.com/Dracu0">
-                <img src="https://github.com/Dracu0.png" style="width:50%; height:auto;" alt="Dracu0"></img>
+                <img src="https://github.com/Dracu0.png" style="width:100px; height:100px;" alt="Dracu0">
                 <br />
             </a>
-            <sub>
-                <b>Dracu0</b>
-            </sub>
-            <br>
-                <sub>David Ramos</sub>
-            </br>
+            <sub><b>Dracu0</b></sub>
+            <br />
+            <sub>David Ramos</sub>
         </td>
         <td style="display:block;" align="center" valign="top" id="wrappercell">
             <a href="https://github.com/Akawii">
-                <img src="https://github.com/Akawii.png" style="width:50%; height:auto;" alt="Akawii"></img>
+                <img src="https://github.com/Akawii.png" style="width:100px; height:100px;" alt="Akawii">
                 <br />
             </a>
-            <sub>
-                <b>Akawii</b>
-            </sub>
-            <br>
-                <sub>Ângela Xavier</sub>
-            </br>
+            <sub><b>Akawii</b></sub>
+            <br />
+            <sub>Ângela Xavier</sub>
         </td>
         <td style="display:block;" align="center" valign="top" id="wrappercell">
             <a href="https://github.com/GuilhermePinto04">
-                <img src="https://github.com/GuilhermePinto04.png" style="width:50%; height:auto;" alt="GuilhermePinto04"></img>
+                <img src="https://github.com/GuilhermePinto04.png" style="width:100px; height:100px;" alt="GuilhermePinto04">
                 <br />
             </a>
-            <sub>
-                <b>GuilhermePinto04</b>
-            </sub>
-            <br>
-                <sub>Guilherme Pinto</sub>
-            </br>
+            <sub><b>GuilhermePinto04</b></sub>
+            <br />
+            <sub>Guilherme Pinto</sub>
         </td>
         <td style="display:block;" align="center" valign="top" id="wrappercell">
             <a href="https://github.com/LucasNeves2003">
-                <img src="https://github.com/LucasNeves2003.png" style="width:50%; height:auto;" alt="LucasNeves2003"></img>
+                <img src="https://github.com/LucasNeves2003.png" style="width:100px; height:100px;" alt="LucasNeves2003">
                 <br />
             </a>
-            <sub>
-                <b>LucasNeves2003</b>
-            </sub>
-            <br>
-                <sub>Lucas Neves</sub>
-            </br>
+            <sub><b>LucasNeves2003</b></sub>
+            <br />
+            <sub>Lucas Neves</sub>
         </td>
-    </tr>
-    <tr>
         <td style="display:block;" align="center" valign="top" id="wrappercell">
             <a href="https://github.com/Zarkwol">
-                <img src="https://github.com/Zarkwol.png" style="width:50%; height:auto;" alt="Zarkwol"></img>
+                <img src="https://github.com/Zarkwol.png" style="width:100px; height:100px;" alt="Zarkwol">
                 <br />
             </a>
-            <sub>
-                <b>Zarkwol</b>
-            </sub>
-            <br>
-                <sub>Diogo Oliveira</sub>
-            </br>
+            <sub><b>Zarkwol</b></sub>
+            <br />
+            <sub>Diogo Oliveira</sub>
         </td>
         <td style="display:block;" align="center" valign="top" id="wrappercell">
             <a href="https://github.com/rodriiabj">
-                <img src="https://github.com/rodriiabj.png" style="width:50%; height:auto;" alt="rodriiabj"></img>
+                <img src="https://github.com/rodriiabj.png" style="width:100px; height:100px;" alt="rodriiabj">
                 <br />
             </a>
-            <sub>
-                <b>rodriiabj</b>
-            </sub>
-            <br>
-                <sub>Rodrigo Jeremias</sub>
-            </br>
+            <sub><b>rodriiabj</b></sub>
+            <br />
+            <sub>Rodrigo Jeremias</sub>
         </td>
-        <td style="display:block;" align="center" valign="top" id="wrappercell">
+       <td style="display:block;" align="center" valign="top" id="wrappercell">
             <a href="https://github.com/JoseCode45">
-                <img src="https://github.com/JoseCode45.png" style="width:50%; height:auto;" alt="JoseCode45"></img>
+                <img src="https://github.com/JoseCode45.png" style="width:100px; height:100px;" alt="JoseCode45">
                 <br />
             </a>
-            <sub>
-                <b>JoseCode45</b>
-            </sub>
-            <br>
-                <sub>José Pisco</sub>
-            </br>
+            <sub><b>JoseCode45</b></sub>
+            <br />
+            <sub>José Pisco</sub>
         </td>
     </tr>
 </table>
+
 
 ## Objetivo: 
  - Aceder ao website com diversos jogos disponiveis e obter pontuação máxima de cada jogo. 
