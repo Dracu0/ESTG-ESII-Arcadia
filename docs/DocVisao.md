@@ -17,7 +17,7 @@ O site de minijogos poderá ser utilizado em diversos contextos e ambientes, com
 - **Anunciantes**: Empresas interessadas em promover os produtos e serviços na plataforma.
 - **Pais e Educadores**: Que podem utilizar o site para momentos de lazer.
 
-## 4. Equipe do Projeto
+## 4. Equipa do Projeto
 ### 4.1 Time de Desenvolvimento
 - **Desenvolvedor Frontend**: Responsável pela interface do usuário(HTML e CSS).
 - **Desenvolvedor Backend**: Responsável pelo servidor e lógica do sistema (C#).
@@ -37,7 +37,7 @@ O site de minijogos poderá ser utilizado em diversos contextos e ambientes, com
    - Rankings específicos para cada jogo, incentivando a competitividade.
 
 3. **Perfis do Utilizador**
-   - Cadastro com nome e password para personalização e armazenamento de dados do usuário.
+   - Cadastro com nome e password para personalização e armazenamento de dados do utilizador.
 
 4. **Design Responsivo**
    - Interface adaptável a qualquer computador, garantindo uma experiência de jogo consistente.
@@ -47,13 +47,10 @@ O site de minijogos poderá ser utilizado em diversos contextos e ambientes, com
 
 ### 5.2 Funcionalidades Adicionais (Não Necessario)
 1. **Interatividade Social**
-   - Comparatilhar Ranking global, Comentários entre utilizadores online, partilhar screenshots.
-2. **Personalização de Avatares**
-   - Opção para que os usuários personalizem seus perfis com avatares, skins ou outras formas de customização visual, utilizando pontos adquiridas nos jogos
-3. **Histórico de Jogos**
+   - Comparatilhar Ranking global, Comentários entre utilizadores online.
+2. **Histórico de Jogos**
    - Armazenamento do histórico de partidas para cada usuário, permitindo que eles revisem seu desempenho anterior, melhorem estratégias e comparem suas estatísticas ao longo do tempo.
-4.**Suporte a Controladores Externos**
-   - Compatibilidade com gamepads e outros controladores externos.
+
   
 ## 6. Arquitetura de Referência
 A arquitetura do sistema será composta pelos seguintes componentes principais:
