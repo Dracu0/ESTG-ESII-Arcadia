@@ -2,7 +2,7 @@
 
 ## Colaboradores:
 
-<table border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout:fixed;">
+<table border="0" cellpadding="0" cellspacing="0" style="table-layout:fixed; width:150px;">
     <tr>
         <td style="display:block;" align="center" valign="top" id="wrappercell">
             <a href="https://github.com/Dracu0">
