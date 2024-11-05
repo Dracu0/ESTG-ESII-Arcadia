@@ -74,6 +74,13 @@
 ## Objetivo: 
  - Aceder ao website com diversos jogos disponiveis e obter pontuação máxima de cada jogo. 
 
+#Jogos:
+- AtomTown
+- Late Night Motorist
+- Flappy Ghost
+- Jogo da Cobra
+- Tetris
+
 ## Linguagens de programação/Apps a ser utilizadas:
  - Outsystems
  - C#
