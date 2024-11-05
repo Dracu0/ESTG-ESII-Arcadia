@@ -74,7 +74,7 @@
 ## Objetivo: 
  - Aceder ao website com diversos jogos disponiveis e obter pontuação máxima de cada jogo. 
 
-#Jogos:
+## Jogos:
 - AtomTown
 - Late Night Motorist
 - Flappy Ghost
