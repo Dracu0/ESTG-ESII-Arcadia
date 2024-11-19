@@ -1,9 +1,20 @@
 body::-webkit-scrollbar {
     display: none;
   }
+
 .a{
     position: absolute;
     font-size: 200%;
     color: black;
 }
 
+.textbox{
+  position: relative;
+  align-items: center;
+  justify-self: center;
+  display: flex;
+  top: 50%;
+  height: 20%;
+  width: 20%;
+  background-color: white;
+}
