@@ -1,0 +1,55 @@
+body::-webkit-scrollbar {
+    display: none;
+  }
+
+/* Background image styles */
+.background-image {
+    width: 100%;
+    height: 130%;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+}
+
+/* Stars gif styles */
+.stars-gif {
+    width: 50%;
+    height: 70%;
+    position: absolute;
+    top: 17%;
+    left: 25%;
+    z-index: -2;
+}
+
+/* Search bar styles */
+.search-bar {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25%;
+    height: 40px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 0 15px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-bar::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+/* Search icon styles */
+.search-icon {
+    width: 40px; /* Adjust the size of the icon */
+    height: 40px;
+    position: absolute;
+    top: 25%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
