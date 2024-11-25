@@ -6,6 +6,10 @@
         <title>Arcadia</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Link to the Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        
         <link rel="stylesheet" type="text/css" href="../resources/css/HomePage.css">
     </head>
     <body style="margin: 0;">
@@ -19,5 +23,74 @@
             <input type="text" class="search-bar" placeholder="Search...">
             <img src="../resources/images/HomePage/LupaButton.png" class="search-icon" alt="Search Icon">
         </div>
+
+        <!-- Menu icon -->
+        <div>
+            <input hidden class="check-icon" id="check-icon" name="check-icon" type="checkbox">
+            <label class="icon-menu" for="check-icon">
+                <div class="bar bar--1"></div>
+                <div class="bar bar--2"></div>
+                <div class="bar bar--3"></div>
+            </label>
+        </div>
+
+        <!-- Menu tab -->
+        <div class="menu-tab" id="menu-tab">
+            <h3>Game Categories</h3>
+            <ul>
+                <li>
+                    <input type="checkbox" id="action" name="categories" value="Action">
+                    <label for="action">Action</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="adventure" name="categories" value="Adventure">
+                    <label for="adventure">Adventure</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="rpg" name="categories" value="RPG">
+                    <label for="rpg">RPG</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="strategy" name="categories" value="Strategy">
+                    <label for="strategy">Strategy</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="sports" name="categories" value="Sports">
+                    <label for="sports">Sports</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="simulation" name="categories" value="Simulation">
+                    <label for="simulation">Simulation</label>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="monitor-container">
+            <!-- Left Image -->
+            <img src="../resources/images/HomePage/leftArrowArcadia.png" id="left-arrow" class="side-image left-image" alt="Left Image">
+            
+            <div class="image-grid">
+                <a href="game1.html" class="image-placeholder-link">
+                    <div class="image-placeholder"></div>
+                </a>
+                <a href="game2.html" class="image-placeholder-link">
+                    <div class="image-placeholder"></div>
+                </a>
+                <a href="game3.html" class="image-placeholder-link">
+                    <div class="image-placeholder"></div>
+                </a>
+                <a href="game4.html" class="image-placeholder-link">
+                    <div class="image-placeholder"></div>
+                </a>
+            </div>
+            
+            <!-- Right Image -->
+            <img src="../resources/images/HomePage/rightArrowArcadia.png" id="right-arrow" class="side-image right-image" alt="Right Image">
+        </div>
+        
+        
+
+        <!-- Script -->
+        <script src="../resources/js/HomePage.js"></script>
     </body>
 </html>
