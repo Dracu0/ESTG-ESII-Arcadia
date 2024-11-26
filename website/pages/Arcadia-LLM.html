@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Arcadia Chatbot</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <style>
+            body {
+                margin: 0;
+                font-family: 'Press Start 2P', cursive;
+                background-color: black;
+                color: white;
+            }
+            .chatbot-container {
+                position: absolute;
+                bottom: 10%;
+                left: 10%;
+                width: 80%;
+                height: 300px;
+                background-color: rgba(0, 0, 0, 0.8);
+                padding: 15px;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            }
+            .chat-display {
+                flex: 1;
+                overflow-y: auto;
+                border: 1px solid white;
+                border-radius: 5px;
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+            .chat-display p {
+                margin: 5px 0;
+            }
+            .chat-input {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            .chat-input input {
+                flex: 1;
+                padding: 10px;
+                border: 1px solid white;
+                border-radius: 5px;
+                background: transparent;
+                color: white;
+                font-family: 'Press Start 2P', cursive;
+            }
+            .chat-input button {
+                padding: 10px 15px;
+                border: none;
+                background-color: #28a745;
+                color: white;
+                font-weight: bold;
+                cursor: pointer;
+                border-radius: 5px;
+                font-family: 'Press Start 2P', cursive;
+            }
+            .chat-input button:hover {
+                background-color: #218838;
+            }
+            /* Style for user messages */
+            .user-message {
+                color: white; /* Default text color */
+                font-family: 'Press Start 2P', cursive; /* Different font for user */
+            }
+            /* Style for bot messages */
+            .bot-message {
+                color: white; /* Default text color */
+                font-family: 'Press Start 2P', cursive; /* Different font for bot */
+            }
+            .message-prefix {
+                font-weight: bold;
+                display: inline;
+            }
+            .user-prefix {
+                color: #4CAF50; /* Green */
+            }
+            .bot-prefix {
+                color: #FF9800; /* Orange */
+            }
+            .message-text {
+                display: inline;
+                color: white; /* Default text color */
+                text-align: justify;
+                font-weight: lighter;
+                text-wrap:pretty;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="chatbot-container">
+            <div class="chat-display" id="chat-display"></div>
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Type your message...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+
+        <script>
+            const apiKey = ""; // Replace with your OpenAI API key
+            const apiUrl = "https://api.openai.com/v1/chat/completions";
+
+            async function sendMessage() {
+                const userInput = document.getElementById('user-input');
+                const chatDisplay = document.getElementById('chat-display');
+
+                if (!userInput.value.trim()) return;
+
+                // Add the user's message to the chat display with user-message class
+                const userMessage = document.createElement('p');
+                userMessage.classList.add('user-message');
+
+                // Create the "You: " part
+                const userPrefix = document.createElement('span');
+                userPrefix.classList.add('message-prefix', 'user-prefix');
+                userPrefix.textContent = 'You: ';
+
+                // Create the rest of the user's message
+                const userText = document.createElement('span');
+                userText.classList.add('message-text');
+                userText.textContent = userInput.value;
+
+                // Append both parts to the user message
+                userMessage.appendChild(userPrefix);
+                userMessage.appendChild(userText);
+                chatDisplay.appendChild(userMessage);
+
+                // Add a new line after user message
+                chatDisplay.appendChild(document.createElement('br'));
+
+                // Scroll to the bottom of the chat display
+                chatDisplay.scrollTop = chatDisplay.scrollHeight;
+
+                // Prepare the API request
+                const data = {
+                    model: "gpt-4o-mini", // Replace with the exact model if different
+                    messages: [
+                        { role: "system", content: "You are a helpful assistant." },
+                        { role: "user", content: userInput.value }
+                    ]
+                };
+
+                try {
+                    // Send request to OpenAI API
+                    const response = await fetch(apiUrl, {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "Authorization": `Bearer ${apiKey}`
+                        },
+                        body: JSON.stringify(data)
+                    });
+
+                    if (!response.ok) {
+                        const errorText = await response.text(); // Get detailed error response
+                        throw new Error(`API Error: ${response.status} - ${response.statusText}\n${errorText}`);
+                    }
+
+                    const result = await response.json();
+                    const botResponse = result.choices[0].message.content;
+
+                    // Add the bot's response to the chat display with bot-message class
+                    const botMessage = document.createElement('p');
+                    botMessage.classList.add('bot-message');
+
+                    // Create the "Bot: " part
+                    const botPrefix = document.createElement('span');
+                    botPrefix.classList.add('message-prefix', 'bot-prefix');
+                    botPrefix.textContent = 'Bot: ';
+
+                    // Create the rest of the bot's message
+                    const botText = document.createElement('span');
+                    botText.classList.add('message-text');
+                    botText.textContent = botResponse;
+
+                    // Append both parts to the bot message
+                    botMessage.appendChild(botPrefix);
+                    botMessage.appendChild(botText);
+                    chatDisplay.appendChild(botMessage);
+
+                    // Add a new line after bot message
+                    chatDisplay.appendChild(document.createElement('br'));
+
+                    // Scroll to the bottom of the chat display
+                    chatDisplay.scrollTop = chatDisplay.scrollHeight;
+                } catch (error) {
+                    // Display full error in the chat display
+                    const errorMessage = document.createElement('pre'); // Use <pre> for better formatting
+                    errorMessage.classList.add('bot-message');
+                    errorMessage.textContent = `Bot: Sorry, an error occurred!\nFull Error:\n${error.message}`;
+                    chatDisplay.appendChild(errorMessage);
+
+                    console.error(error); // Log the full error in the console for debugging
+                }
+
+                // Clear the input field
+                userInput.value = '';
+            }
+        </script>
+    </body>
+</html>
