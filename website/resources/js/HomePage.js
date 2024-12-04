@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             images: [
                 "../resources/images/HomePage/image1.jpg",
-                "../resources/images/HomePage/image2.jpg",
+                "../resources/images/Games/FlappyGhost.png",
                 "../resources/images/HomePage/image3.jpg",
                 "../resources/images/HomePage/image4.jpg",
             ],

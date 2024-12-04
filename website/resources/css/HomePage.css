@@ -215,6 +215,9 @@ h1, h2, h3, h4, h5, h6, p, li, span, a {
     width: 350px; /* Set your desired width */
     height: 200px; /* Set your desired height */
     border-radius: 8px;
+    border: #ffffff;
+    border-style: solid;
+    border-width: 0.5px;
     display: flex;
     align-items: center; /* Center the image vertically */
     justify-content: center; /* Center the image horizontally */
