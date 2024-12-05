@@ -8,30 +8,30 @@ document.addEventListener("DOMContentLoaded", () => {
     const imageSets = [
         {
             images: [
-                "../resources/images/HomePage/image1.jpg",
-                "../resources/images/Games/FlappyGhost.png",
-                "../resources/images/HomePage/image3.jpg",
-                "../resources/images/HomePage/image4.jpg",
+                "../resources/images/Games/OurGames/Snake.png",
+                "../resources/images/Games/OurGames/FlappyGhost.png",
+                "../resources/images/Games/OurGames/LNM Background.png",
+                "../resources/images/Games/OurGames/image 4.png",
             ],
             links: [
-                "../resources/games/WebGLBuild/index.html",
-                "game2.html",
-                "game3.html",
-                "game4.html",
+                "Snake.html",
+                "FlappyGhost.html",
+                "LLM.html",
+                "Hazard.html",
             ],
         },
         {
             images: [
-                "../resources/images/HomePage/image5.jpg",
-                "../resources/images/HomePage/image6.jpg",
-                "../resources/images/HomePage/image7.jpg",
-                "../resources/images/HomePage/image8.jpg",
+                "../resources/images/Games/OurGames/image 5.png",
+                "../resources/images/Games/Space Waves.png",
+                "../resources/images/Games/Words Of Wonder.png",
+                "../resources/images/Games/Jogo Do Galo.png",
             ],
             links: [
                 "game5.html",
-                "game6.html",
-                "game7.html",
-                "game8.html",
+                "https://www.crazygames.com.br/jogos/space-waves",
+                "https://www.crazygames.com.br/jogos/words-of-wonders",
+                "https://www.hypatiamat.com/jogos/jogoDoGalo/jogoDoGalo_Vhtml.html",
             ],
         },
     ];
