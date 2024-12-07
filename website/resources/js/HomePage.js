@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 "../resources/images/Games/OurGames/Snake.png",
                 "../resources/images/Games/OurGames/FlappyGhost.png",
                 "../resources/images/Games/OurGames/LNM Background.png",
-                "../resources/images/Games/OurGames/image 4.png",
+                "../resources/images/Games/OurGames/Tetris.png",
             ],
             links: [
                 "Snake.html",
