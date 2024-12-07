@@ -1,9 +1,15 @@
+function goToSpecificPage() {
+    window.location.href = "../pages/LoginPage.html";
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     const leftArrow = document.getElementById("left-arrow");
     const rightArrow = document.getElementById("right-arrow");
     const imageGrid = document.querySelector(".image-grid");
     const menuIcon = document.querySelector(".icon-menu");
     const menuTab = document.getElementById("menu-tab");
+    const searchBar = document.querySelector(".search-bar");
+
 
     const imageSets = [
         {
@@ -16,9 +22,10 @@ document.addEventListener("DOMContentLoaded", () => {
             links: [
                 "Snake.html",
                 "FlappyGhost.html",
-                "LLM.html",
+                "LNM.html",
                 "Hazard.html",
             ],
+            names: ["Snake", "Flappy Ghost", "Late Night Motorist", "Tetris"],
         },
         {
             images: [
@@ -33,60 +40,118 @@ document.addEventListener("DOMContentLoaded", () => {
                 "https://www.crazygames.com.br/jogos/words-of-wonders",
                 "https://www.hypatiamat.com/jogos/jogoDoGalo/jogoDoGalo_Vhtml.html",
             ],
+            names: ["Hazard", "Space Waves", "Words of Wonder", "Jogo Do Galo"],
         },
     ];
 
-    let currentSetIndex = 0;
-
-    // Initialize the grid
-    function initializeImageGrid() {
-        const currentSet = imageSets[currentSetIndex];
-        const placeholders = imageGrid.querySelectorAll(".image-placeholder-link");
-
-        placeholders.forEach((link, index) => {
-            const placeholder = link.querySelector(".image-placeholder");
-
-            if (!placeholder.querySelector("img")) {
-                const img = document.createElement("img");
-                img.src = currentSet.images[index];
-                placeholder.appendChild(img);
-            } else {
-                placeholder.querySelector("img").src = currentSet.images[index];
-            }
-
-            // Update the link
-            link.setAttribute("data-popup", currentSet.links[index]);
-        });
-    }
-
-    // Update the grid on arrow click
-    function updateImageGrid() {
-        const currentSet = imageSets[currentSetIndex];
-        const links = imageGrid.querySelectorAll(".image-placeholder-link");
-
-        links.forEach((link, index) => {
-            const img = link.querySelector(".image-placeholder img");
-            img.src = currentSet.images[index];
-            link.setAttribute("data-popup", currentSet.links[index]);
-        });
-    }
-
-    // Popup functionality
-    function openPopup(link) {
-        const popupWidth = 800; // Width of the popup
-        const popupHeight = 600; // Height of the popup
     
-        // Calculate the position to center the popup
+    let currentSetIndex = 0;
+    let isSearching = false; // Flag para controlar se estamos pesquisando
+
+    // Função para inicializar a grid combinada (apenas para pesquisa)
+    function initializeCombinedImageGrid(filteredGames = []) {
+        imageGrid.innerHTML = ''; // Limpar a grid
+
+        // Exibir apenas 4 jogos por vez, durante a pesquisa
+        const gamesToDisplay = filteredGames.slice(0, 4);
+        
+        gamesToDisplay.forEach(game => {
+            const link = document.createElement('a');
+            link.classList.add("image-placeholder-link");
+            link.setAttribute("data-popup", game.link);
+            link.setAttribute("data-name", game.name.toLowerCase());
+
+            const placeholder = document.createElement('div');
+            placeholder.classList.add("image-placeholder");
+
+            const img = document.createElement("img");
+            img.src = game.image;
+
+            placeholder.appendChild(img);
+            link.appendChild(placeholder);
+            imageGrid.appendChild(link);
+
+            // Adicionar funcionalidade de clique para abrir no popup
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                openPopup(game.link);
+            });
+        });
+
+        // Desabilitar as setas enquanto estamos pesquisando
+        leftArrow.style.pointerEvents = 'none';
+        rightArrow.style.pointerEvents = 'none';
+    }
+
+    // Função para restaurar a grid normal, com as setas habilitadas
+    function restoreNormalGrid() {
+        leftArrow.style.pointerEvents = 'auto';
+        rightArrow.style.pointerEvents = 'auto';
+        imageGrid.innerHTML = ''; // Limpar a grid
+
+        // Inicializar a grid normal com base no conjunto atual
+        const currentSet = imageSets[currentSetIndex];
+        currentSet.images.forEach((image, index) => {
+            const link = document.createElement('a');
+            link.classList.add("image-placeholder-link");
+            link.setAttribute("data-popup", currentSet.links[index]);
+            link.setAttribute("data-name", currentSet.names[index].toLowerCase());
+
+            const placeholder = document.createElement('div');
+            placeholder.classList.add("image-placeholder");
+
+            const img = document.createElement("img");
+            img.src = image;
+
+            placeholder.appendChild(img);
+            link.appendChild(placeholder);
+            imageGrid.appendChild(link);
+
+            // Adicionar funcionalidade de clique para abrir no popup
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                openPopup(currentSet.links[index]);
+            });
+        });
+    }
+
+    // Função para manipular as setas quando não estamos pesquisando
+    function handleArrowNavigation() {
+        leftArrow.addEventListener("click", () => {
+            if (!isSearching) {
+                currentSetIndex =
+                    currentSetIndex === 0 ? imageSets.length - 1 : currentSetIndex - 1;
+                restoreNormalGrid();
+            }
+        });
+
+        rightArrow.addEventListener("click", () => {
+            if (!isSearching) {
+                currentSetIndex =
+                    currentSetIndex === imageSets.length - 1 ? 0 : currentSetIndex + 1;
+                restoreNormalGrid();
+            }
+        });
+    }
+
+    // Função para abrir o jogo em um popup
+    function openPopup(link) {
+        const popupWidth = 800; // Largura do popup
+        const popupHeight = 600; // Altura do popup
+
+        // Calcular a posição para centralizar o popup
         const screenLeft = window.screenLeft || window.screenX;
         const screenTop = window.screenTop || window.screenY;
-    
-        const screenWidth = window.innerWidth || document.documentElement.clientWidth || screen.width;
-        const screenHeight = window.innerHeight || document.documentElement.clientHeight || screen.height;
-    
+
+        const screenWidth =
+            window.innerWidth || document.documentElement.clientWidth || screen.width;
+        const screenHeight =
+            window.innerHeight || document.documentElement.clientHeight || screen.height;
+
         const left = screenLeft + (screenWidth - popupWidth) / 2;
         const top = screenTop + (screenHeight - popupHeight) / 2;
-    
-        // Open the popup in the center of the screen
+
+        // Abrir o popup no centro da tela
         window.open(
             link,
             "popupWindow",
@@ -94,34 +159,36 @@ document.addEventListener("DOMContentLoaded", () => {
         );
     }
 
-    // Add click event to open in popup
-    imageGrid.addEventListener("click", (event) => {
-        const linkElement = event.target.closest(".image-placeholder-link");
-        if (linkElement) {
-            const popupLink = linkElement.getAttribute("data-popup");
-            openPopup(popupLink);
-            event.preventDefault();
+    // Função de pesquisa
+    searchBar.addEventListener("input", (event) => {
+        const searchTerm = event.target.value.toLowerCase();
+
+        // Filtrando todos os jogos combinados das duas grids
+        const allGames = [
+            ...imageSets[0].images.map((image, index) => ({
+                image,
+                link: imageSets[0].links[index],
+                name: imageSets[0].names[index]
+            })),
+            ...imageSets[1].images.map((image, index) => ({
+                image,
+                link: imageSets[1].links[index],
+                name: imageSets[1].names[index]
+            }))
+        ];
+
+        const filteredGames = allGames.filter(game => game.name.toLowerCase().includes(searchTerm));
+
+        if (searchTerm.length > 0) {
+            isSearching = true; // Modo de pesquisa ativo
+            initializeCombinedImageGrid(filteredGames); // Inicializar a grid com os jogos filtrados
+        } else {
+            isSearching = false; // Modo de pesquisa desativado
+            restoreNormalGrid(); // Restaurar a grid original
         }
     });
 
-    // Arrow functionality
-    leftArrow.addEventListener("click", () => {
-        currentSetIndex =
-            currentSetIndex === 0 ? imageSets.length - 1 : currentSetIndex - 1;
-        updateImageGrid();
-    });
-
-    rightArrow.addEventListener("click", () => {
-        currentSetIndex =
-            currentSetIndex === imageSets.length - 1 ? 0 : currentSetIndex + 1;
-        updateImageGrid();
-    });
-
-    // Toggle the menu visibility when the menu icon is clicked
-    menuIcon.addEventListener("click", () => {
-        menuTab.classList.toggle("visible");
-    });
-
-    // Initialize on load
-    initializeImageGrid();
+    // Inicializar a grid normal
+    restoreNormalGrid();
+    handleArrowNavigation();
 });

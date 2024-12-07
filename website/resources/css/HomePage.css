@@ -129,6 +129,17 @@ h1, h2, h3, h4, h5, h6, p, li, span, a {
     --rotate-bar-one: 45deg;
     --rotate-bar-three: -45deg;
 }
+
+/* Search icon styles */
+.back-icon {
+    width: 40px; /* Adjust the size of the icon */
+    height: 40px;
+    position: absolute;
+    top: 25%;
+    left: 31%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
 /*#endregion*/
 
 /* Menu tab styles */
@@ -151,7 +162,7 @@ h1, h2, h3, h4, h5, h6, p, li, span, a {
     pointer-events: none; /* Prevent interactions when hidden */
 }
 
-.menu-tab.visible {
+.check-icon:checked ~ .menu-tab {
     opacity: 1; /* Fade in */
     transform: translateX(0); /* Slide into place */
     pointer-events: auto; /* Allow interactions when visible */
@@ -204,10 +215,13 @@ h1, h2, h3, h4, h5, h6, p, li, span, a {
 
 /* Make the placeholder clickable */
 .image-placeholder-link {
-    display: block; /* Make the <a> tag a block element so it fills the grid item */
-    width: 100%;
-    height: 100%;
-    text-decoration: none; /* Remove underline from the links */
+    display: inline-block;
+    position: relative;
+    cursor: pointer; /* Adiciona o cursor de mão */
+}
+
+.image-placeholder-link:hover {
+    opacity: 0.8;
 }
 
 /* Styling for each image placeholder */
