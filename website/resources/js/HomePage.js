@@ -6,14 +6,26 @@ document.addEventListener("DOMContentLoaded", () => {
     const leftArrow = document.getElementById("left-arrow");
     const rightArrow = document.getElementById("right-arrow");
     const imageGrid = document.querySelector(".image-grid");
-    const menuIcon = document.querySelector(".icon-menu");
     const menuTab = document.getElementById("menu-tab");
     const searchBar = document.querySelector(".search-bar");
-    const searchIcon = document.getElementById("search-icon");
+    const chatIcon = document.getElementById("chat-icon");
+    const menuCheckbox = document.getElementById("check-icon");
+
+    menuCheckbox.addEventListener("change", () => {
+        if (menuCheckbox.checked) {
+            menuTab.style.opacity = "1";
+            menuTab.style.transform = "translateX(0)";
+            menuTab.style.pointerEvents = "auto";
+        } else {
+            menuTab.style.opacity = "0";
+            menuTab.style.transform = "translateX(-20px)";
+            menuTab.style.pointerEvents = "none";
+        }
+    });
 
 
     // Função para abrir o popup ao clicar no search icon
-    searchIcon.addEventListener("click", () => {
+    chatIcon.addEventListener("click", () => {
         const popupWidth = 1000; // Largura do popup
         const popupHeight = 800; // Altura do popup
 
@@ -103,10 +115,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 openPopup(game.link);
             });
         });
-
-        // Desabilitar as setas enquanto estamos pesquisando
-        leftArrow.style.pointerEvents = 'none';
-        rightArrow.style.pointerEvents = 'none';
     }
 
     // Função para restaurar a grid normal, com as setas habilitadas
