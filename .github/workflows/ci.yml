@@ -3,30 +3,27 @@ name: CI Pipeline
 on:
   push:
     branches:
-      - main  # ou a branch principal do seu projeto
+      - main 
   pull_request:
     branches:
-      - main  # ou a branch principal do seu projeto
+      - main 
 
 jobs:
   test:
-    runs-on: ubuntu-latest  # Ambiente onde o job será executado
+    runs-on: ubuntu-latest
 
     steps:
-      # Passo 1: Faz o checkout do código
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Passo 2: Configura o Node.js 
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'  
+          node-version: '16' 
 
-      # Passo 3: Instalar as dependências
       - name: Install dependencies
         run: npm install
 
-      # Passo 4: Rodar os testes
       - name: Run tests
-        run: npm test  # ou ajuste para 'npm run test:ci' se você tiver um script específico
+        run: npm test
+
