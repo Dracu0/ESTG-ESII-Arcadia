@@ -1,6 +1,21 @@
 // Get references to elements
 const buttonArea = document.querySelector('.buttonArea');
 const linkArea = document.querySelector('.linkArea');
+var password = document.getElementById("password")
+  , confirm_password = document.getElementById("confirm_password");
+
+// Validate if passwords match
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    password.setCustomValidity('As passwords não são iguais');
+  } else {
+    password.setCustomValidity('');
+  }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+
 const movingDivs = [
     { element: document.querySelector('.startArrow'), baseLeft: 35.7 },
     { element: document.querySelector('.characterArrow'), baseLeft: 35.8 }
