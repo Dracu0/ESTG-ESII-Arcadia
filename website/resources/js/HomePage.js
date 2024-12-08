@@ -9,7 +9,33 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuIcon = document.querySelector(".icon-menu");
     const menuTab = document.getElementById("menu-tab");
     const searchBar = document.querySelector(".search-bar");
+    const searchIcon = document.getElementById("search-icon");
 
+
+    // Função para abrir o popup ao clicar no search icon
+    searchIcon.addEventListener("click", () => {
+        const popupWidth = 1000; // Largura do popup
+        const popupHeight = 800; // Altura do popup
+
+        // Calcular a posição para centralizar o popup
+        const screenLeft = window.screenLeft || window.screenX;
+        const screenTop = window.screenTop || window.screenY;
+
+        const screenWidth =
+            window.innerWidth || document.documentElement.clientWidth || screen.width;
+        const screenHeight =
+            window.innerHeight || document.documentElement.clientHeight || screen.height;
+
+        const left = screenLeft + (screenWidth - popupWidth) / 2 + 45;
+        const top = screenTop + (screenHeight - popupHeight) / 2;
+
+        // Abrir um popup vazio
+        window.open(
+            "about:blank",
+            "popupWindow",
+            `width=${popupWidth},height=${popupHeight},top=${top},left=${left},resizable=yes,scrollbars=yes`
+        );
+    });
 
     const imageSets = [
         {
@@ -136,8 +162,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Função para abrir o jogo em um popup
     function openPopup(link) {
-        const popupWidth = 800; // Largura do popup
-        const popupHeight = 600; // Altura do popup
+        const popupWidth = 1000; // Largura do popup
+        const popupHeight = 800; // Altura do popup
 
         // Calcular a posição para centralizar o popup
         const screenLeft = window.screenLeft || window.screenX;
@@ -148,7 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const screenHeight =
             window.innerHeight || document.documentElement.clientHeight || screen.height;
 
-        const left = screenLeft + (screenWidth - popupWidth) / 2;
+        const left = screenLeft + (screenWidth - popupWidth) / 2 + 45;
         const top = screenTop + (screenHeight - popupHeight) / 2;
 
         // Abrir o popup no centro da tela

@@ -57,7 +57,7 @@ h1, h2, h3, h4, h5, h6, p, li, span, a {
 
 /* Search icon styles */
 .search-icon {
-    width: 40px; /* Adjust the size of the icon */
+    width: 40px;
     height: 40px;
     position: absolute;
     top: 25%;
