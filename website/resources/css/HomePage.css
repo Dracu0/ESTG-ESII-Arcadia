@@ -1,52 +1,52 @@
-body::-webkit-scrollbar {
-    display: none;
-}
-
-/* Apply pixelated font globally */
+/* General Body Styles */
 body {
     font-family: 'Press Start 2P', cursive;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Ensure that all text elements follow the same font */
-h1, h2, h3, h4, h5, h6, p, li, span, a {
+/* Text Elements */
+h1, h2, h3, h4, h5, p, li, span, a {
     font-family: 'Press Start 2P', cursive;
 }
 
-/* Background image styles */
 .background-image {
     width: 100%;
     height: 130%;
     position: absolute;
     left: 0;
     z-index: -1;
+    background-image: url('path/to/your/image.jpg'); /* Add image URL here */
+    background-size: cover; /* Adjust as needed */
 }
 
-/* Stars gif styles */
+/* Stars GIF */
 .stars-gif {
     width: 50%;
     height: 70%;
     position: absolute;
     top: 17%;
     left: 25%;
-    z-index: -2;
+    z-index: -2;  /* Ensure stars are behind other content */
 }
 
-/*#region SearchBar*/
-/* Search bar styles */
+/* Search bar */
 .search-bar {
     position: absolute;
     top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 25%;
-    height: 40px;
+    width: 25vw; /* Responsive width */
+    height: 5vh; /* Responsive height */
     border: 2px solid #fff;
     border-radius: 20px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 0 15px;
     font-family: 'Press Start 2P', cursive;
-    font-size: 13px;
+    font-size: 1rem; /* Responsive font size */
     outline: none;
 }
 
@@ -55,22 +55,21 @@ h1, h2, h3, h4, h5, h6, p, li, span, a {
     font-style: italic;
 }
 
-/* Search icon styles */
+/* Search icon */
 .chat-icon {
     width: 40px;
     height: 40px;
-    position: absolute;
-    top: 25%;
-    left: 65%;
-    transform: translate(-50%, -50%);
+    position: fixed;  /* Change from absolute to fixed */
+    bottom: 10px;     /* 10px from the bottom of the screen */
+    right: 10px;      /* 10px from the right of the screen */
     cursor: pointer;
+    z-index: 1001;    /* Ensure the icon stays on top of other content */
 }
-/*#endregion */
 
-/*#region Menu Icon*/
+/* Menu icon */
 .icon-menu {
-    --gap: 8px; /* Increased gap between bars */
-    --height-bar: 5px; /* Increased bar height */
+    --gap: 8px;
+    --height-bar: 5px;
     --pos-y-bar-one: 0;
     --pos-y-bar-three: 0;
     --scale-bar: 1;
@@ -78,7 +77,7 @@ h1, h2, h3, h4, h5, h6, p, li, span, a {
     --rotate-bar-three: 0;
     top: 23.6%;
     left: 33.7%;
-    width: 40px; /* Increased menu width */
+    width: 40px;
     display: flex;
     flex-direction: column;
     gap: var(--gap);
@@ -89,8 +88,8 @@ h1, h2, h3, h4, h5, h6, p, li, span, a {
 /* Bar styles */
 .bar {
     position: relative;
-    height: var(--height-bar); /* Use the updated bar height */
-    width: 100%; /* Adjust width automatically to match the menu size */
+    height: var(--height-bar);
+    width: 100%;
     border-radius: 0.5rem;
     background-color: #ffffff;
 }
@@ -131,14 +130,14 @@ h1, h2, h3, h4, h5, h6, p, li, span, a {
 }
 
 .check-icon:checked ~ .menu-tab {
-    opacity: 1; /* Faz o menu aparecer */
-    transform: translateX(0); /* Remove o deslocamento */
-    pointer-events: auto; /* Permite interação */
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
 }
 
-/* Search icon styles */
+/* Back icon */
 .back-icon {
-    width: 40px; /* Adjust the size of the icon */
+    width: 40px;
     height: 40px;
     position: absolute;
     top: 25%;
@@ -146,44 +145,43 @@ h1, h2, h3, h4, h5, h6, p, li, span, a {
     transform: translate(-50%, -50%);
     cursor: pointer;
 }
-/*#endregion*/
 
-/* Menu tab styles */
+/* Menu Tab */
 .menu-tab {
     position: absolute;
     top: 30%;
     left: 33.7%;
-    background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent */
-    color: rgb(50, 50, 50); /* Dark text for better contrast */
+    background-color: rgba(255, 255, 255, 0.95);
+    color: rgb(50, 50, 50);
     padding: 20px;
-    border-radius: 12px; /* Slightly rounded corners */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
-    display: block; /* Always block, but hidden initially with opacity */
-    opacity: 0; /* Start invisible */
-    transform: translateX(-20px); /* Start slightly offset */
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    display: block;
+    opacity: 0;
+    transform: translateX(-20px);
     transition: opacity 0.6s ease, transform 0.6s ease;
     z-index: 10;
     width: 300px;
-    font-size: 16px; /* Adjusted for readability */
-    pointer-events: none; /* Prevent interactions when hidden */
+    font-size: 1rem; /* Responsive font size */
+    pointer-events: none;
 }
 
 .check-icon:checked ~ .menu-tab {
-    opacity: 1; /* Fade in */
-    transform: translateX(0); /* Slide into place */
-    pointer-events: auto; /* Allow interactions when visible */
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
 }
 
 .menu-tab h3 {
     margin-top: 0;
-    font-size: 17px; /* Larger heading size */
-    color: #333; /* Darker for visibility */
+    font-size: 1.1rem; /* Responsive font size */
+    color: #333;
     margin-bottom: 10px;
     text-align: center;
 }
 
 .menu-tab ul {
-    list-style-type: none; /* Remove default bullet points */
+    list-style-type: none;
     padding: 0;
     margin: 0;
 }
@@ -195,84 +193,212 @@ h1, h2, h3, h4, h5, h6, p, li, span, a {
 }
 
 .menu-tab input[type="checkbox"] {
-    margin-right: 10px; /* Space between checkbox and label */
-    transform: scale(1.2); /* Enlarge the checkboxes */
+    margin-right: 10px;
+    transform: scale(1.2);
 }
 
 .menu-tab label {
-    font-size: 14px; /* Adjusted label font size */
+    font-size: 0.9rem; /* Responsive font size */
     cursor: pointer;
-    color: #333; /* Better contrast for text */
+    color: #333;
 }
 
-
-/* Styling for the grid container (inside the monitor) */
+/* Image Grid */
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Creates two columns */
-    grid-gap: 30px; /* Smaller gap between items */
-    padding: 10px; /* Ensure no padding is outside the grid */
-    position: absolute; /* Position the grid inside the monitor */
-    top: 31%; /* Adjust the vertical position */
-    left: 29.7%; /* Adjust the horizontal position */
-    width: 40%;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust column size for responsiveness */
+    grid-gap: 20px; /* Adjust the spacing between the items */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the grid */
+    width: 70%; /* Adjust width as needed */
     z-index: 9;
 }
 
-/* Make the placeholder clickable */
-.image-placeholder-link {
-    display: inline-block;
-    position: relative;
-    cursor: pointer; /* Adiciona o cursor de mão */
-}
-
-.image-placeholder-link:hover {
-    opacity: 0.8;
-}
-
-/* Styling for each image placeholder */
+/* Image Placeholder */
 .image-placeholder {
-    width: 350px; /* Set your desired width */
-    height: 200px; /* Set your desired height */
+    width: 100%;  /* Ensure it scales properly within its container */
+    height: 200px; /* Adjust height to fit */
+    max-width: 100%; /* Ensure the image doesn't overflow */
     border-radius: 8px;
-    border: #ffffff;
-    border-style: solid;
-    border-width: 0.5px;
+    border: #ffffff solid 0.5px;
     display: flex;
-    align-items: center; /* Center the image vertically */
-    justify-content: center; /* Center the image horizontally */
-    overflow: hidden; /* Hide overflow to avoid image spilling */
-    background-color: #f0f0f0; /* Optional: Add a background color */
+    align-items: center; /* Center image vertically */
+    justify-content: center; /* Center image horizontally */
+    overflow: hidden;
+    background-color: #f0f0f0;
 }
 
 .image-placeholder img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Options: cover, contain, or fill */
-    display: block; /* Avoid extra space below the image */
+    object-fit: cover; /* Adjust image scaling */
+    display: block;
 }
 
-
-/* Common styles for the side images */
+/* Side Images */
 .side-image {
     position: absolute;
-    width: 3%; /* Adjust image width for consistency */
-    height: auto; /* Maintain aspect ratio */
-    z-index: 9; /* Place above background and below grid if needed */
+    width: 3%;
+    height: auto;
+    z-index: 9;
 }
 
-/* Positioning for the left image */
+/* Left Image */
 .left-image {
-    top: 54%; /* Vertically align near the center of the monitor */
-    left: 27.5%; /* Adjust distance from the monitor's edge */
-    transform: translate(-50%, -50%); /* Center the image */
+    top: 54%;
+    left: 27.5%;
+    transform: translate(-50%, -50%);
     cursor: pointer;
 }
 
-/* Positioning for the right image */
+/* Right Image */
 .right-image {
-    top: 54%; /* Vertically align near the center of the monitor */
-    right: 27.5%; /* Adjust distance from the monitor's edge */
-    transform: translate(50%, -50%); /* Center the image */
+    top: 54%;
+    right: 27.5%;
+    transform: translate(50%, -50%);
     cursor: pointer;
+}
+
+/* Game Containers */
+.game-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    margin-bottom: 20px;
+}
+
+.game-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Popup container */
+.popup-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 350px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none; /* Hide by default */
+    z-index: 1000;
+}
+
+/* Chat window content */
+.chat-popup {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 10px;
+}
+
+.chat-display {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    max-height: 70%;
+}
+
+.chat-display p {
+    margin: 5px 0;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Header section */
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2em;  /* Slightly larger header text */
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background: transparent;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1em;
+}
+
+.chat-input button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.chat-input button:hover {
+    background-color: #218838;
+}
+
+/* Style for user messages */
+.user-message {
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* Style for bot messages */
+.bot-message {
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.message-prefix {
+    font-weight: bold;
+}
+
+.user-prefix {
+    color: #4CAF50; /* Green */
+}
+
+.bot-prefix {
+    color: #FF9800; /* Orange */
+}
+
+.message-text {
+    display: inline;
+    color: white;
+    text-align: justify;
+    font-weight: lighter;
 }

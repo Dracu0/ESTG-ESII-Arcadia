@@ -24,6 +24,14 @@
         <img src="../resources/images/HomePage/ChatButton.png" class="chat-icon" alt="Search Icon" id="chat-icon">
     </div>
 
+    <div id="popup-container" class="popup-container" style="display: none;">
+        <div class="chat-popup">
+            <div id="chat-display" class="chat-display"></div>
+            <input id="user-input" type="text" placeholder="Type your message..." />
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
     <!-- Menu icon -->
     <div>
         <input hidden class="check-icon" id="check-icon" name="check-icon" type="checkbox">
