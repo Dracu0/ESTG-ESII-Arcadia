@@ -19,11 +19,15 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '16' 
+          node-version: '16'
 
-      - name: Install dependencies
-        run: npm install
+      - name: Garantir permissões de execução para Jest
+        run: chmod +x node_modules/.bin/jest
+
+      - name: Instalar dependências
+        run: npm ci
 
       - name: Run tests
         run: npm test
+
 
