@@ -15,6 +15,24 @@ function validatePassword(){
 
 password.onchange = validatePassword;
 confirm_password.onkeyup = validatePassword;
+window.onload = function() {
+    document.getElementById('ShowPass').checked = false;
+};
+
+function myFunction() {
+    var x = document.getElementById("password");
+    var y = document.getElementById("confirm_password");
+    if (x.type === "password") {
+      x.type = "text";
+    } else {
+      x.type = "password";
+    }
+    if (y.type === "password") {
+        y.type = "text";
+      } else {
+        y.type = "password";
+      }
+  } 
 
 const movingDivs = [
     { element: document.querySelector('.startArrow'), baseLeft: 35.7 },
