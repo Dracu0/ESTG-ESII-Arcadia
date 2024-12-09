@@ -40,8 +40,8 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y cloc  # Instala o cloc no runner Ubuntu
 
       # Passo 7: Contar linhas de código e salvar relatório
-      - name: Gerar relatório de linhas de código
-        run: cloc . > cloc_report.txt  # Conta as linhas e salva o resultado em um arquivo
+      - name: Criar relatório de linhas de código 'website'
+        run: cloc website > cloc_report.txt  # Conta as linhas e salva o resultado em um arquivo
 
       # Passo 8: Upload do relatório como artefato (usando a versão v3)
       - name: Upload do relatório como artefato
