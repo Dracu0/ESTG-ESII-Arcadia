@@ -13,20 +13,39 @@ jobs:
     runs-on: ubuntu-latest  # Utiliza a última versão do Ubuntu para rodar o job
 
     steps:
+      # Passo 1: Fazer checkout do código
       - name: Checkout code
         uses: actions/checkout@v2  # Faz o checkout do código no repositório
 
+      # Passo 2: Configurar Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v2  # Configura o Node.js no ambiente
         with:
           node-version: '16'  # Define a versão do Node.js a ser utilizada
 
+      # Passo 3: Garantir permissões de execução para Jest
       - name: Garantir permissões de execução para Jest
         run: chmod +x node_modules/.bin/jest  # Garante que o Jest tenha permissões de execução
 
+      # Passo 4: Instalar dependências do projeto
       - name: Instalar dependências
         run: npm ci  # Instala as dependências do projeto com 'npm ci'
 
+      # Passo 5: Executar testes com Jest
       - name: Run tests
         run: npm test  # Executa os testes definidos no script de testes do package.json
-       
+
+      # Passo 6: Instalar cloc para contagem de linhas de código
+      - name: Instalar cloc
+        run: sudo apt-get update && sudo apt-get install -y cloc  # Instala o cloc no runner Ubuntu
+
+      # Passo 7: Contar linhas de código e salvar relatório
+      - name: Criar relatório de linhas de código 'website'
+        run: cloc website > cloc_report.txt  # Conta as linhas e salva o resultado em um arquivo
+
+      # Passo 8: Upload do relatório como artefato (usando a versão v3)
+      - name: Upload do relatório como artefato
+        uses: actions/upload-artifact@v4  # Usa a versão v3 para evitar o erro
+        with:
+          name: cloc-report  # Nome do artefato
+          path: cloc_report.txt  # Caminho do arquivo a ser salvo
