@@ -58,8 +58,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 "../resources/images/Games/OurGames/Tetris.png",
             ],
             links: [
-                "Snake.html",
-                "FlappyGhost.html",
+                "../../jogos/SnakeGame/SnakeGameWeb/SnakeGameWeb/index.html",
+                "../../jogos/FlappyGhostWebGL/index.html",
                 "LNM.html",
                 "Hazard.html",
             ],
