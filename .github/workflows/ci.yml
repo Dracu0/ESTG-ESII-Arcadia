@@ -3,31 +3,30 @@ name: CI Pipeline
 on:
   push:
     branches:
-      - main 
+      - main  # Dispara a pipeline quando houver um push na branch 'main'
   pull_request:
     branches:
-      - main 
+      - main  # Dispara a pipeline para pull requests direcionados à branch 'main'
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # Utiliza a última versão do Ubuntu para rodar o job
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2  # Faz o checkout do código no repositório
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v2  # Configura o Node.js no ambiente
         with:
-          node-version: '16'
+          node-version: '16'  # Define a versão do Node.js a ser utilizada
 
       - name: Garantir permissões de execução para Jest
-        run: chmod +x node_modules/.bin/jest
+        run: chmod +x node_modules/.bin/jest  # Garante que o Jest tenha permissões de execução
 
       - name: Instalar dependências
-        run: npm ci
+        run: npm ci  # Instala as dependências do projeto com 'npm ci'
 
       - name: Run tests
-        run: npm test
-
-
+        run: npm test  # Executa os testes definidos no script de testes do package.json
+       
