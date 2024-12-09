@@ -43,9 +43,9 @@ jobs:
       - name: Gerar relatório de linhas de código
         run: cloc . > cloc_report.txt  # Conta as linhas e salva o resultado em um arquivo
 
-      # Passo 8: Upload do relatório como artefato
+      # Passo 8: Upload do relatório como artefato (usando a versão v3)
       - name: Upload do relatório como artefato
-        uses: actions/upload-artifact@v2  # Salva o arquivo gerado como um artefato
+        uses: actions/upload-artifact@v3  # Usa a versão v3 para evitar o erro
         with:
           name: cloc-report  # Nome do artefato
           path: cloc_report.txt  # Caminho do arquivo a ser salvo
