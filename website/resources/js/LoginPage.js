@@ -2,7 +2,7 @@
 const buttonArea = document.querySelector('.buttonArea');
 const linkArea = document.querySelector('.linkArea');
 const movingDivs = [
-    { element: document.querySelector('.startArrow'), baseLeft: 40 },
+    { element: document.querySelector('.startArrow'), baseLeft: 40.5 },
     { element: document.querySelector('.characterArrow'), baseLeft: 35.8 }
 ];
 
