@@ -41,9 +41,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const left = screenLeft + (screenWidth - popupWidth) / 2 + 45;
         const top = screenTop + (screenHeight - popupHeight) / 2;
 
-        // Abrir um popup vazio
+        // Abrir um popup 
         window.open(
-            "about:blank",
+            "../pages/Arcadia-LLM.html",
             "popupWindow",
             `width=${popupWidth},height=${popupHeight},top=${top},left=${left},resizable=yes,scrollbars=yes`
         );
@@ -60,8 +60,8 @@ document.addEventListener("DOMContentLoaded", () => {
             links: [
                 "../../jogos/SnakeGame/SnakeGameWeb/index.html",
                 "../../jogos/FlappyBirdWebGL/index.html",
-                "../../LNM.html",
-                "../../Hazard.html",
+                "../resources/games/LateNightMotorist/index.html",
+                "../../TETRIS.html",
             ],
             names: ["Snake", "Flappy Ghost", "Late Night Motorist", "Tetris"],
         },
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 "../resources/images/Games/Jogo Do Galo.png",
             ],
             links: [
-                "../../game5.html",
+                "../resources/games/AtomTown/index.html",
                 "https://www.crazygames.com.br/jogos/space-waves",
                 "https://www.crazygames.com.br/jogos/words-of-wonders",
                 "https://www.hypatiamat.com/jogos/jogoDoGalo/jogoDoGalo_Vhtml.html",
