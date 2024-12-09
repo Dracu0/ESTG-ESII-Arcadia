@@ -60,20 +60,20 @@ document.addEventListener("DOMContentLoaded", () => {
             links: [
                 "../../jogos/SnakeGame/SnakeGameWeb/index.html",
                 "../../jogos/FlappyBirdWebGL/index.html",
-                "LNM.html",
-                "Hazard.html",
+                "../../LNM.html",
+                "../../Hazard.html",
             ],
             names: ["Snake", "Flappy Ghost", "Late Night Motorist", "Tetris"],
         },
         {
             images: [
-                "../resources/images/Games/OurGames/image 5.png",
+                "../resources/images/Games/OurGames/AtomTown.png",
                 "../resources/images/Games/Space Waves.png",
                 "../resources/images/Games/Words Of Wonder.png",
                 "../resources/images/Games/Jogo Do Galo.png",
             ],
             links: [
-                "game5.html",
+                "../../game5.html",
                 "https://www.crazygames.com.br/jogos/space-waves",
                 "https://www.crazygames.com.br/jogos/words-of-wonders",
                 "https://www.hypatiamat.com/jogos/jogoDoGalo/jogoDoGalo_Vhtml.html",
