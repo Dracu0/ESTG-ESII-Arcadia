@@ -54,12 +54,12 @@ document.addEventListener("DOMContentLoaded", () => {
             images: [
                 "../resources/images/Games/OurGames/Snake.png",
                 "../resources/images/Games/OurGames/FlappyGhost.png",
-                "../resources/images/Games/OurGames/LNM Background.png",
+                "../resources/images/Games/OurGames/LNM BG.png",
                 "../resources/images/Games/OurGames/Tetris.png",
             ],
             links: [
-                "../../jogos/SnakeGame/SnakeGameWeb/SnakeGameWeb/index.html",
-                "../../jogos/FlappyGhostWebGL/index.html",
+                "../../jogos/SnakeGame/SnakeGameWeb/index.html",
+                "../../jogos/FlappyBirdWebGL/index.html",
                 "LNM.html",
                 "Hazard.html",
             ],
