@@ -5,6 +5,8 @@
 ### Criação de Conta
 - Como utilizador, quero criar uma conta no site, para poder aceder aos jogos e conseguir guardar as minhas pontuações.
   - Critério de Aceitação: O utilizador deve poder registar-se com um nome e uma palavra-passe.
+- Como utilizador, quero poder recorrer a jogos com a implemetanção da inteligência artificial, para ter interações inovadoras.
+  - Critério de Aceitação: O utilizador deve utilizar o chatbot.
 
 ### Pesquisa de Jogos por Categoria
 - Como utilizador, quero pesquisar jogos por categoria, para encontrar facilmente o tipo de jogo que me interessa.
