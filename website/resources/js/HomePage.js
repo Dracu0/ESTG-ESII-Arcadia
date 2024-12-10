@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 "../../jogos/SnakeGame/SnakeGameWeb/index.html",
                 "../../jogos/FlappyBirdWebGL/index.html",
                 "../resources/games/LateNightMotorist/index.html",
-                "../../TETRIS.html",
+                "..//resources/games/Tetris/index.html",
             ],
             names: ["Snake", "Flappy Ghost", "Late Night Motorist", "Tetris"],
         },
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 "https://www.crazygames.com.br/jogos/words-of-wonders",
                 "https://www.hypatiamat.com/jogos/jogoDoGalo/jogoDoGalo_Vhtml.html",
             ],
-            names: ["Hazard", "Space Waves", "Words of Wonder", "Jogo Do Galo"],
+            names: ["Atom Town", "Space Waves", "Words of Wonder", "Jogo Do Galo"],
         },
     ];
 
