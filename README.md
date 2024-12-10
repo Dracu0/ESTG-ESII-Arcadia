@@ -71,6 +71,11 @@
 </table>
 
 
+## Índice
+- [Objetivo](#objetivo)
+- [Jogos](#jogos)
+- [Linguagens de Programação/Apps](#linguagens-de-programaçãoapps-a-ser-utilizadas)
+
 ## Objetivo: 
  - Aceder ao website com diversos jogos disponiveis e obter pontuação máxima de cada jogo. 
 
@@ -88,8 +93,4 @@
  - HTML
  - Unity
 
-## Instalação
- - Clonar este repositório:
-   ```bash
-   git clone https://github.com/Dracu0/ESTG-ESII-Arcadia.git
 
